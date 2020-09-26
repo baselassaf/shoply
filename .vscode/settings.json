@@ -1,0 +1,16 @@
+{
+    "razor.devmode": true,
+    "omnisharp.waitForDebugger": true,
+    "omnisharp.projectLoadTimeout": 6000,
+    "tslint.suppressWhileTypeErrorsPresent": true,
+    "omnisharp.disableMSBuildDiagnosticWarning": true,
+    "csharp.maxProjectFileCountForDiagnosticAnalysis": 100000,
+    "omnisharp.minFindSymbolsFilterLength": 1,
+    "razor.languageServer.debug": true,
+    "csharp.suppressDotnetInstallWarning": true,
+    "csharp.suppressBuildAssetsNotification": true,
+    "csharp.semanticHighlighting.enabled": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "razor.disabled": true,
+    "razor.disableBlazorDebugPrompt": true
+}
