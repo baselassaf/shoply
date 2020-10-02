@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Core.Interfaces;
 using Infrastructure;
+using AutoMapper;
+using API.Helpers;
 
 namespace API {
     public class Startup {
@@ -30,6 +32,7 @@ namespace API {
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericRepository<>), (typeof(GenericRepository<>)));
             services.AddControllers ();
+            services.AddAutoMapper(typeof(MappingProfiles));
             services.AddDbContext<StoreContext> (x => 
             x.UseSqlite (_configuration.GetConnectionString("DefaultConnection")));
         }
@@ -43,6 +46,8 @@ namespace API {
             app.UseHttpsRedirection ();
 
             app.UseRouting ();
+
+            app.UseStaticFiles();
 
             app.UseAuthorization ();
             //map end points to controller when we start app
